@@ -28,46 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            label1 = new Label();
             textBox1 = new TextBox();
-            txtUsername = new Label();
+            textBox2 = new TextBox();
+            button1 = new Button();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
             SuspendLayout();
             // 
-            // button1
+            // label1
             // 
-            button1.Location = new Point(12, 93);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "Submit";
-            button1.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(116, 44);
+            label1.Margin = new Padding(15);
+            label1.Name = "label1";
+            label1.Padding = new Padding(15);
+            label1.Size = new Size(188, 68);
+            label1.TabIndex = 0;
+            label1.Text = "WELCOME";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(108, 33);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Cursor = Cursors.IBeam;
+            textBox1.Location = new Point(23, 151);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(186, 27);
-            textBox1.TabIndex = 2;
+            textBox1.PlaceholderText = "Username";
+            textBox1.Size = new Size(367, 20);
+            textBox1.TabIndex = 1;
             // 
-            // txtUsername
+            // textBox2
             // 
-            txtUsername.AutoSize = true;
-            txtUsername.Location = new Point(12, 36);
-            txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(90, 20);
-            txtUsername.TabIndex = 3;
-            txtUsername.Text = "Enter Name:";
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Cursor = Cursors.IBeam;
+            textBox2.Location = new Point(23, 222);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.PlaceholderText = "Password";
+            textBox2.Size = new Size(367, 20);
+            textBox2.TabIndex = 2;
+            textBox2.UseSystemPasswordChar = true;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.Location = new Point(116, 367);
+            button1.Name = "button1";
+            button1.Size = new Size(188, 30);
+            button1.TabIndex = 3;
+            button1.Text = "Login";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(23, 291);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(82, 24);
+            radioButton1.TabIndex = 4;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "DevOps";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(275, 291);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(115, 24);
+            radioButton2.TabIndex = 5;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Support DEV";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(309, 149);
-            Controls.Add(txtUsername);
-            Controls.Add(textBox1);
+            ClientSize = new Size(417, 427);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
             Controls.Add(button1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Cursor = Cursors.Default;
             Name = "Form1";
-            Text = "Form1";
+            Padding = new Padding(20);
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -75,8 +127,11 @@
 
         #endregion
 
-        private Button button1;
+        private Label label1;
         private TextBox textBox1;
-        private Label txtUsername;
+        private TextBox textBox2;
+        private Button button1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
     }
 }

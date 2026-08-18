@@ -12,13 +12,13 @@ namespace WinFormsApp1
 
         }
 
-        private void btnVerify_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             // Get whatever the user typed into the TextBox
-            string username = txtUsername.Text;
+            string username = textBox1.Text;
+            string password = textBox2.Text;
 
-            // Check if it is EXACTLY "aleena"
-            if (username == "aleena")
+            if (username == "devOpsUser1" && password == "devOpsPassword" && radioButton1.Checked)
             {
                 // Show success message
                 MessageBox.Show("User verified");
@@ -31,27 +31,20 @@ namespace WinFormsApp1
 
                 // Hide the current Form1
                 this.Hide();
+
+            }
+            else if (username == "supportDevUser1" && password == "supportDevPassword" && radioButton2.Checked)
+            {
+                // Show success message
+                MessageBox.Show("User verified");
+                Form3 nextForm = new Form3();
+                nextForm.Show();
+                this.Hide();
             }
             else
             {
-                // Anything other than exactly "aleena"
                 MessageBox.Show("Wrong user");
             }
-        }
-    }
-}
-
-
-namespace WinFormsApp1
-{
-    public partial class Form2 : Form
-    {
-        public Form2()
-        {
-            InitializeComponent();
-
-            // Set the welcome message
-            lblWelcome.Text = "Welcome to the next page!";
         }
     }
 }
