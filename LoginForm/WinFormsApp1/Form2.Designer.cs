@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             lblWelcome = new Label();
-            backbutton1 = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblWelcome
@@ -41,22 +41,23 @@
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "label1";
             // 
-            // backbutton1
+            // button1
             // 
-            backbutton1.FlatAppearance.BorderSize = 0;
-            backbutton1.Location = new Point(12, 120);
-            backbutton1.Name = "backbutton1";
-            backbutton1.Size = new Size(188, 30);
-            backbutton1.TabIndex = 4;
-            backbutton1.Text = "back";
-            backbutton1.UseVisualStyleBackColor = true;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.Location = new Point(12, 120);
+            button1.Name = "button1";
+            button1.Size = new Size(188, 30);
+            button1.TabIndex = 4;
+            button1.Text = "back";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += this.button1_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(245, 162);
-            Controls.Add(backbutton1);
+            Controls.Add(button1);
             Controls.Add(lblWelcome);
             Name = "Form2";
             Text = "Form2";
@@ -68,6 +69,5 @@
 
         private Label lblWelcome;
         private Button button1;
-        private Button backbutton1;
     }
 }

@@ -34,6 +34,7 @@
             button1 = new Button();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             // button1
             // 
             button1.FlatAppearance.BorderSize = 0;
-            button1.Location = new Point(116, 367);
+            button1.Location = new Point(120, 403);
             button1.Name = "button1";
             button1.Size = new Size(188, 30);
             button1.TabIndex = 3;
@@ -85,7 +86,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(23, 291);
+            radioButton1.Location = new Point(27, 327);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(82, 24);
             radioButton1.TabIndex = 4;
@@ -96,7 +97,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(275, 291);
+            radioButton2.Location = new Point(275, 327);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(115, 24);
             radioButton2.TabIndex = 5;
@@ -104,18 +105,28 @@
             radioButton2.Text = "Support DEV";
             radioButton2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(23, 296);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 20);
+            label2.TabIndex = 6;
+            label2.Text = "Select Role";
+            label2.Click += Form1_Load;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(417, 427);
+            ClientSize = new Size(417, 497);
+            Controls.Add(label2);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Cursor = Cursors.Default;
             Name = "Form1";
             Padding = new Padding(20);
             StartPosition = FormStartPosition.CenterScreen;
@@ -133,5 +144,6 @@
         private Button button1;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private Label label2;
     }
 }
