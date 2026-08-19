@@ -28,105 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            label2 = new Label();
+            wlcm_lbl = new Label();
+            user_txtbx = new TextBox();
+            pw_txtbx = new TextBox();
+            lgn_bttn = new Button();
+            devops_rdbttn = new RadioButton();
+            supprtdev_rdbttn = new RadioButton();
+            slct_lbl = new Label();
             SuspendLayout();
             // 
-            // label1
+            // wlcm_lbl
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(116, 44);
-            label1.Margin = new Padding(15);
-            label1.Name = "label1";
-            label1.Padding = new Padding(15);
-            label1.Size = new Size(188, 68);
-            label1.TabIndex = 0;
-            label1.Text = "WELCOME";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            wlcm_lbl.AutoSize = true;
+            wlcm_lbl.Font = new Font("Segoe UI Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wlcm_lbl.Location = new Point(116, 44);
+            wlcm_lbl.Margin = new Padding(15);
+            wlcm_lbl.Name = "wlcm_lbl";
+            wlcm_lbl.Padding = new Padding(15);
+            wlcm_lbl.Size = new Size(188, 68);
+            wlcm_lbl.TabIndex = 0;
+            wlcm_lbl.Text = "WELCOME";
+            wlcm_lbl.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // user_txtbx
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Location = new Point(23, 151);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Username";
-            textBox1.Size = new Size(367, 20);
-            textBox1.TabIndex = 1;
+            user_txtbx.BorderStyle = BorderStyle.None;
+            user_txtbx.Cursor = Cursors.IBeam;
+            user_txtbx.Location = new Point(23, 151);
+            user_txtbx.Name = "user_txtbx";
+            user_txtbx.PlaceholderText = "Username";
+            user_txtbx.Size = new Size(367, 20);
+            user_txtbx.TabIndex = 1;
             // 
-            // textBox2
+            // pw_txtbx
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Location = new Point(23, 222);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.PlaceholderText = "Password";
-            textBox2.Size = new Size(367, 20);
-            textBox2.TabIndex = 2;
-            textBox2.UseSystemPasswordChar = true;
+            pw_txtbx.BorderStyle = BorderStyle.None;
+            pw_txtbx.Cursor = Cursors.IBeam;
+            pw_txtbx.Location = new Point(23, 222);
+            pw_txtbx.Name = "pw_txtbx";
+            pw_txtbx.PasswordChar = '*';
+            pw_txtbx.PlaceholderText = "Password";
+            pw_txtbx.Size = new Size(367, 20);
+            pw_txtbx.TabIndex = 2;
+            pw_txtbx.UseSystemPasswordChar = true;
             // 
-            // button1
+            // lgn_bttn
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.Location = new Point(120, 403);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 30);
-            button1.TabIndex = 3;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            lgn_bttn.FlatAppearance.BorderSize = 0;
+            lgn_bttn.Location = new Point(116, 396);
+            lgn_bttn.Name = "lgn_bttn";
+            lgn_bttn.Size = new Size(188, 30);
+            lgn_bttn.TabIndex = 3;
+            lgn_bttn.Text = "Login";
+            lgn_bttn.UseVisualStyleBackColor = true;
+            lgn_bttn.Click += lgn_bttn_Click;
             // 
-            // radioButton1
+            // devops_rdbttn
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(27, 327);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(82, 24);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "DevOps";
-            radioButton1.UseVisualStyleBackColor = true;
+            devops_rdbttn.AutoSize = true;
+            devops_rdbttn.Location = new Point(27, 327);
+            devops_rdbttn.Name = "devops_rdbttn";
+            devops_rdbttn.Size = new Size(82, 24);
+            devops_rdbttn.TabIndex = 4;
+            devops_rdbttn.TabStop = true;
+            devops_rdbttn.Text = "DevOps";
+            devops_rdbttn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // supprtdev_rdbttn
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(275, 327);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(115, 24);
-            radioButton2.TabIndex = 5;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Support DEV";
-            radioButton2.UseVisualStyleBackColor = true;
+            supprtdev_rdbttn.AutoSize = true;
+            supprtdev_rdbttn.Location = new Point(275, 327);
+            supprtdev_rdbttn.Name = "supprtdev_rdbttn";
+            supprtdev_rdbttn.Size = new Size(115, 24);
+            supprtdev_rdbttn.TabIndex = 5;
+            supprtdev_rdbttn.TabStop = true;
+            supprtdev_rdbttn.Text = "Support DEV";
+            supprtdev_rdbttn.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // slct_lbl
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(23, 296);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Select Role";
-            label2.Click += Form1_Load;
+            slct_lbl.AutoSize = true;
+            slct_lbl.Location = new Point(23, 296);
+            slct_lbl.Name = "slct_lbl";
+            slct_lbl.Size = new Size(83, 20);
+            slct_lbl.TabIndex = 6;
+            slct_lbl.Text = "Select Role";
+            slct_lbl.Click += Form1_Load;
             // 
             // Form1
             // 
+            AcceptButton = lgn_bttn;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(417, 497);
-            Controls.Add(label2);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(slct_lbl);
+            Controls.Add(supprtdev_rdbttn);
+            Controls.Add(devops_rdbttn);
+            Controls.Add(lgn_bttn);
+            Controls.Add(pw_txtbx);
+            Controls.Add(user_txtbx);
+            Controls.Add(wlcm_lbl);
             Name = "Form1";
             Padding = new Padding(20);
             StartPosition = FormStartPosition.CenterScreen;
@@ -138,12 +139,12 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private Label label2;
+        private Label wlcm_lbl;
+        private TextBox user_txtbx;
+        private TextBox pw_txtbx;
+        private Button lgn_bttn;
+        private RadioButton devops_rdbttn;
+        private RadioButton supprtdev_rdbttn;
+        private Label slct_lbl;
     }
 }

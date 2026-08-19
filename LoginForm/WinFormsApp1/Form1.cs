@@ -14,20 +14,24 @@ namespace WinFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lgn_bttn_Click(object sender, EventArgs e)
         {
             // Get whatever the user typed into the TextBox
-            string username = textBox1.Text;
-            string password = textBox2.Text;
-            string role = radioButton1.Checked ? "DevOps" : radioButton2.Checked ? "SupportDev" : null;
+            string username = user_txtbx.Text;
+            string password = pw_txtbx.Text;
+            string role = devops_rdbttn.Checked ? "DevOps" : supprtdev_rdbttn.Checked ? "SupportDev" : null;
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            while (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || role == null)
             {
-                MessageBox.Show("Enter all fields");
-            }
-            else if (role==null)
-            {
-                MessageBox.Show("Role not selected");
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show("Enter all fields");
+                }
+                else if (role == null)
+                {
+                    MessageBox.Show("Role not selected");
+                }
+                return; // Exit the method to prevent further execution
             }
 
             //if (username == "devOpsUser1" && password == "devOpsPassword" && radioButton1.Checked)

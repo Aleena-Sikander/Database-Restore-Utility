@@ -16,8 +16,10 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
+            tabPage2.Text = "Backup History";
+
             // Set the welcome message
-            lblWelcome.Text = "Welcome to the devOps page!";
+            //lblWelcome.Text = "Welcome to the devOps page!";
         }
 
         private void Form2_Load(object sender, EventArgs e)

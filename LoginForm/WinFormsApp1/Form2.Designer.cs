@@ -28,46 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblWelcome = new Label();
             button1 = new Button();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            button2 = new Button();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
-            // 
-            // lblWelcome
-            // 
-            lblWelcome.AutoSize = true;
-            lblWelcome.Location = new Point(12, 9);
-            lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(50, 20);
-            lblWelcome.TabIndex = 0;
-            lblWelcome.Text = "label1";
             // 
             // button1
             // 
             button1.FlatAppearance.BorderSize = 0;
-            button1.Location = new Point(12, 120);
+            button1.Location = new Point(831, 22);
             button1.Name = "button1";
             button1.Size = new Size(188, 30);
             button1.TabIndex = 4;
-            button1.Text = "back";
+            button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += this.button1_Click;
+            button1.Click += button1_Click;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(12, 12);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1048, 517);
+            tabControl1.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(button1);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1040, 484);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "New Backup Request";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(button2);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1040, 484);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.Location = new Point(836, 19);
+            button2.Name = "button2";
+            button2.Size = new Size(188, 30);
+            button2.TabIndex = 5;
+            button2.Text = "Log Out";
+            button2.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(245, 162);
-            Controls.Add(button1);
-            Controls.Add(lblWelcome);
+            ClientSize = new Size(1072, 541);
+            Controls.Add(tabControl1);
             Name = "Form2";
+            Padding = new Padding(20);
             Text = "Form2";
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label lblWelcome;
         private Button button1;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Button button2;
     }
 }
