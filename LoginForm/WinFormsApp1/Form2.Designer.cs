@@ -31,19 +31,19 @@
             bckp_rq_lgout_btn = new Button();
             tabControl = new TabControl();
             bckp_rq_tbPg = new TabPage();
+            cncl_btn = new Button();
+            sbmt_btn = new Button();
+            bckp_dt_pckr = new DateTimePicker();
+            othr_rdBtn = new RadioButton();
+            lst_bckp_rdBtn = new RadioButton();
+            frsh_bckp_rdBtn = new RadioButton();
+            bckp_src_lbl = new Label();
+            rstr_rq_nm_txtbx = new TextBox();
+            rstr_rq_nm_lbl = new Label();
+            cmpnydb_cmbBx = new ComboBox();
             cmpnydb_lbl = new Label();
             bckp_hstry_tbPg = new TabPage();
-            cmpnydb_cmbBx = new ComboBox();
             bckp_hstry_lgout_btn = new Button();
-            rstr_rq_nm_lbl = new Label();
-            rstr_rq_nm_txtbx = new TextBox();
-            bckp_src_lbl = new Label();
-            frsh_bckp_rdBtn = new RadioButton();
-            lst_bckp_rdBtn = new RadioButton();
-            othr_rdBtn = new RadioButton();
-            bckp_dt_pckr = new DateTimePicker();
-            sbmt_btn = new Button();
-            cncl_btn = new Button();
             tabControl.SuspendLayout();
             bckp_rq_tbPg.SuspendLayout();
             bckp_hstry_tbPg.SuspendLayout();
@@ -96,6 +96,112 @@
             bckp_rq_tbPg.TabIndex = 0;
             bckp_rq_tbPg.Text = "New Backup Request";
             // 
+            // cncl_btn
+            // 
+            cncl_btn.BackColor = SystemColors.ActiveCaption;
+            cncl_btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cncl_btn.ForeColor = SystemColors.Control;
+            cncl_btn.Location = new Point(158, 336);
+            cncl_btn.Name = "cncl_btn";
+            cncl_btn.Size = new Size(94, 29);
+            cncl_btn.TabIndex = 17;
+            cncl_btn.Text = "Cancel";
+            cncl_btn.UseVisualStyleBackColor = false;
+            cncl_btn.Click += cncl_btn_Click;
+            // 
+            // sbmt_btn
+            // 
+            sbmt_btn.BackColor = SystemColors.Desktop;
+            sbmt_btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            sbmt_btn.ForeColor = SystemColors.Control;
+            sbmt_btn.Location = new Point(22, 336);
+            sbmt_btn.Name = "sbmt_btn";
+            sbmt_btn.Size = new Size(94, 29);
+            sbmt_btn.TabIndex = 16;
+            sbmt_btn.Text = "Submit";
+            sbmt_btn.UseVisualStyleBackColor = false;
+            sbmt_btn.Click += sbmt_btn_Click;
+            // 
+            // bckp_dt_pckr
+            // 
+            bckp_dt_pckr.Enabled = false;
+            bckp_dt_pckr.Location = new Point(22, 276);
+            bckp_dt_pckr.Name = "bckp_dt_pckr";
+            bckp_dt_pckr.Size = new Size(303, 27);
+            bckp_dt_pckr.TabIndex = 15;
+            // 
+            // othr_rdBtn
+            // 
+            othr_rdBtn.AutoSize = true;
+            othr_rdBtn.Location = new Point(258, 226);
+            othr_rdBtn.Name = "othr_rdBtn";
+            othr_rdBtn.Size = new Size(67, 24);
+            othr_rdBtn.TabIndex = 14;
+            othr_rdBtn.TabStop = true;
+            othr_rdBtn.Text = "Other";
+            othr_rdBtn.UseVisualStyleBackColor = true;
+            othr_rdBtn.CheckedChanged += BackupSource_CheckedChanged;
+            // 
+            // lst_bckp_rdBtn
+            // 
+            lst_bckp_rdBtn.AutoSize = true;
+            lst_bckp_rdBtn.Location = new Point(144, 226);
+            lst_bckp_rdBtn.Name = "lst_bckp_rdBtn";
+            lst_bckp_rdBtn.Size = new Size(108, 24);
+            lst_bckp_rdBtn.TabIndex = 13;
+            lst_bckp_rdBtn.TabStop = true;
+            lst_bckp_rdBtn.Text = "Last backup";
+            lst_bckp_rdBtn.UseVisualStyleBackColor = true;
+            lst_bckp_rdBtn.CheckedChanged += BackupSource_CheckedChanged;
+            // 
+            // frsh_bckp_rdBtn
+            // 
+            frsh_bckp_rdBtn.AutoSize = true;
+            frsh_bckp_rdBtn.Location = new Point(22, 226);
+            frsh_bckp_rdBtn.Name = "frsh_bckp_rdBtn";
+            frsh_bckp_rdBtn.Size = new Size(116, 24);
+            frsh_bckp_rdBtn.TabIndex = 12;
+            frsh_bckp_rdBtn.TabStop = true;
+            frsh_bckp_rdBtn.Text = "Fresh backup";
+            frsh_bckp_rdBtn.UseVisualStyleBackColor = true;
+            frsh_bckp_rdBtn.CheckedChanged += BackupSource_CheckedChanged;
+            // 
+            // bckp_src_lbl
+            // 
+            bckp_src_lbl.AutoSize = true;
+            bckp_src_lbl.Location = new Point(22, 194);
+            bckp_src_lbl.Name = "bckp_src_lbl";
+            bckp_src_lbl.Size = new Size(107, 20);
+            bckp_src_lbl.TabIndex = 10;
+            bckp_src_lbl.Text = "Backup source:";
+            // 
+            // rstr_rq_nm_txtbx
+            // 
+            rstr_rq_nm_txtbx.BorderStyle = BorderStyle.None;
+            rstr_rq_nm_txtbx.Location = new Point(22, 143);
+            rstr_rq_nm_txtbx.Name = "rstr_rq_nm_txtbx";
+            rstr_rq_nm_txtbx.Size = new Size(368, 20);
+            rstr_rq_nm_txtbx.TabIndex = 9;
+            // 
+            // rstr_rq_nm_lbl
+            // 
+            rstr_rq_nm_lbl.AutoSize = true;
+            rstr_rq_nm_lbl.Location = new Point(22, 111);
+            rstr_rq_nm_lbl.Name = "rstr_rq_nm_lbl";
+            rstr_rq_nm_lbl.Size = new Size(156, 20);
+            rstr_rq_nm_lbl.TabIndex = 7;
+            rstr_rq_nm_lbl.Text = "Restore request name:";
+            // 
+            // cmpnydb_cmbBx
+            // 
+            cmpnydb_cmbBx.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmpnydb_cmbBx.FlatStyle = FlatStyle.Flat;
+            cmpnydb_cmbBx.FormattingEnabled = true;
+            cmpnydb_cmbBx.Location = new Point(22, 54);
+            cmpnydb_cmbBx.Name = "cmpnydb_cmbBx";
+            cmpnydb_cmbBx.Size = new Size(368, 28);
+            cmpnydb_cmbBx.TabIndex = 6;
+            // 
             // cmpnydb_lbl
             // 
             cmpnydb_lbl.AutoSize = true;
@@ -111,20 +217,10 @@
             bckp_hstry_tbPg.Location = new Point(4, 29);
             bckp_hstry_tbPg.Name = "bckp_hstry_tbPg";
             bckp_hstry_tbPg.Padding = new Padding(3);
-            bckp_hstry_tbPg.Size = new Size(1040, 484);
+            bckp_hstry_tbPg.Size = new Size(417, 395);
             bckp_hstry_tbPg.TabIndex = 1;
             bckp_hstry_tbPg.Text = "tabPage2";
             bckp_hstry_tbPg.UseVisualStyleBackColor = true;
-            // 
-            // cmpnydb_cmbBx
-            // 
-            cmpnydb_cmbBx.FlatStyle = FlatStyle.Flat;
-            cmpnydb_cmbBx.FormattingEnabled = true;
-            cmpnydb_cmbBx.Location = new Point(22, 54);
-            cmpnydb_cmbBx.Name = "cmpnydb_cmbBx";
-            cmpnydb_cmbBx.Size = new Size(368, 28);
-            cmpnydb_cmbBx.TabIndex = 6;
-            cmpnydb_cmbBx.Text = "Select Database...";
             // 
             // bckp_hstry_lgout_btn
             // 
@@ -138,98 +234,6 @@
             bckp_hstry_lgout_btn.TabIndex = 6;
             bckp_hstry_lgout_btn.Text = "Log Out";
             bckp_hstry_lgout_btn.UseVisualStyleBackColor = false;
-            // 
-            // rstr_rq_nm_lbl
-            // 
-            rstr_rq_nm_lbl.AutoSize = true;
-            rstr_rq_nm_lbl.Location = new Point(22, 111);
-            rstr_rq_nm_lbl.Name = "rstr_rq_nm_lbl";
-            rstr_rq_nm_lbl.Size = new Size(156, 20);
-            rstr_rq_nm_lbl.TabIndex = 7;
-            rstr_rq_nm_lbl.Text = "Restore request name:";
-            //rstr_rq_nm_lbl.Click += this.label2_Click;
-            // 
-            // rstr_rq_nm_txtbx
-            // 
-            rstr_rq_nm_txtbx.BorderStyle = BorderStyle.None;
-            rstr_rq_nm_txtbx.Location = new Point(22, 143);
-            rstr_rq_nm_txtbx.Name = "rstr_rq_nm_txtbx";
-            rstr_rq_nm_txtbx.Size = new Size(368, 20);
-            rstr_rq_nm_txtbx.TabIndex = 9;
-            // 
-            // bckp_src_lbl
-            // 
-            bckp_src_lbl.AutoSize = true;
-            bckp_src_lbl.Location = new Point(22, 194);
-            bckp_src_lbl.Name = "bckp_src_lbl";
-            bckp_src_lbl.Size = new Size(107, 20);
-            bckp_src_lbl.TabIndex = 10;
-            bckp_src_lbl.Text = "Backup source:";
-            // 
-            // frsh_bckp_rdBtn
-            // 
-            frsh_bckp_rdBtn.AutoSize = true;
-            frsh_bckp_rdBtn.Location = new Point(22, 226);
-            frsh_bckp_rdBtn.Name = "frsh_bckp_rdBtn";
-            frsh_bckp_rdBtn.Size = new Size(116, 24);
-            frsh_bckp_rdBtn.TabIndex = 12;
-            frsh_bckp_rdBtn.TabStop = true;
-            frsh_bckp_rdBtn.Text = "Fresh backup";
-            frsh_bckp_rdBtn.UseVisualStyleBackColor = true;
-            // 
-            // lst_bckp_rdBtn
-            // 
-            lst_bckp_rdBtn.AutoSize = true;
-            lst_bckp_rdBtn.Location = new Point(144, 226);
-            lst_bckp_rdBtn.Name = "lst_bckp_rdBtn";
-            lst_bckp_rdBtn.Size = new Size(108, 24);
-            lst_bckp_rdBtn.TabIndex = 13;
-            lst_bckp_rdBtn.TabStop = true;
-            lst_bckp_rdBtn.Text = "Last backup";
-            lst_bckp_rdBtn.UseVisualStyleBackColor = true;
-            // 
-            // othr_rdBtn
-            // 
-            othr_rdBtn.AutoSize = true;
-            othr_rdBtn.Location = new Point(258, 226);
-            othr_rdBtn.Name = "othr_rdBtn";
-            othr_rdBtn.Size = new Size(67, 24);
-            othr_rdBtn.TabIndex = 14;
-            othr_rdBtn.TabStop = true;
-            othr_rdBtn.Text = "Other";
-            othr_rdBtn.UseVisualStyleBackColor = true;
-            // 
-            // bckp_dt_pckr
-            // 
-            bckp_dt_pckr.Enabled = false;
-            bckp_dt_pckr.Location = new Point(22, 276);
-            bckp_dt_pckr.Name = "bckp_dt_pckr";
-            bckp_dt_pckr.Size = new Size(303, 27);
-            bckp_dt_pckr.TabIndex = 15;
-            // 
-            // sbmt_btn
-            // 
-            sbmt_btn.BackColor = SystemColors.Desktop;
-            sbmt_btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            sbmt_btn.ForeColor = SystemColors.Control;
-            sbmt_btn.Location = new Point(22, 336);
-            sbmt_btn.Name = "sbmt_btn";
-            sbmt_btn.Size = new Size(94, 29);
-            sbmt_btn.TabIndex = 16;
-            sbmt_btn.Text = "Submit";
-            sbmt_btn.UseVisualStyleBackColor = false;
-            // 
-            // cncl_btn
-            // 
-            cncl_btn.BackColor = SystemColors.ActiveCaption;
-            cncl_btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cncl_btn.ForeColor = SystemColors.Control;
-            cncl_btn.Location = new Point(158, 336);
-            cncl_btn.Name = "cncl_btn";
-            cncl_btn.Size = new Size(94, 29);
-            cncl_btn.TabIndex = 17;
-            cncl_btn.Text = "Cancel";
-            cncl_btn.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 

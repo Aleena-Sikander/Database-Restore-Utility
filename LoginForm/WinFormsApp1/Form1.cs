@@ -16,7 +16,6 @@ namespace WinFormsApp1
 
         private void lgn_bttn_Click(object sender, EventArgs e)
         {
-            // Get whatever the user typed into the TextBox
             string username = user_txtbx.Text;
             string password = pw_txtbx.Text;
             string role = devops_rdbttn.Checked ? "DevOps" : supprtdev_rdbttn.Checked ? "SupportDev" : null;
@@ -31,41 +30,18 @@ namespace WinFormsApp1
                 {
                     MessageBox.Show("Role not selected");
                 }
-                return; // Exit the method to prevent further execution
+                return; 
             }
-
-            //if (username == "devOpsUser1" && password == "devOpsPassword" && radioButton1.Checked)
-            //{
-            //    // Show success message
-            //    MessageBox.Show("User verified");
-
-            //    // Create a new Form2
-            //    Form2 nextForm = new Form2();
-
-            //    // Display Form2
-            //    nextForm.Show();
-
-            //    // Hide the current Form1
-            //    this.Hide();
-
-            //}
-            //else if (username == "supportDevUser1" && password == "supportDevPassword" && radioButton2.Checked)
-            //{
-            //    // Show success message
-            //    MessageBox.Show("User verified");
-            //    Form3 nextForm = new Form3();
-            //    nextForm.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Wrong user");
-            //}
 
             // Hardcoded login verification
             switch ((username, password, role))
             {
-                case ("devOpsUser1", "devOpsPassword", "DevOps"):
+                //case ("devOpsUser1", "devOpsPassword", "DevOps"):
+                //    MessageBox.Show("User verified");
+                //    OpenForm(new Form2());
+                //    break;
+
+                case ("aleena", "123", "DevOps"):
                     MessageBox.Show("User verified");
                     OpenForm(new Form2());
                     break;
@@ -80,8 +56,6 @@ namespace WinFormsApp1
                     break;
             }
         }
-
-        //helper function
         private void OpenForm(Form nextForm)
         {
             nextForm.Show();
